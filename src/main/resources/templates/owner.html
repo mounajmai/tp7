@@ -1,0 +1,21 @@
+<!-- src/main/resources/templates/owner-form.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create/Update Owner</title>
+</head>
+<body>
+
+<h1>Create/Update Owner</h1>
+
+<form th:object="${owner}" th:action="@{/api/owners}" th:method="post">
+    <input type="hidden" th:field="*{id}">
+    <label>Name: <input type="text" th:field="*{name}" required></label><br>
+    <label>Contact Information: <input type="text" th:field="*{contactInformation}" required></label><br>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

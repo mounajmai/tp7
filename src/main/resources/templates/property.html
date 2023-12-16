@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Property Details</title>
+</head>
+<body>
+<h1>Property Details</h1>
+
+<div th:if="${property}">
+  <p>ID: <span th:text="${property.id}"></span></p>
+  <p>Address: <span th:text="${property.address}"></span></p>
+  <p>Price: <span th:text="${property.price}"></span></p>
+</div>
+
+<a th:href="@{/properties}">Back to Properties List</a>
+</body>
+</html>
+
+
+</body>
+</html>
